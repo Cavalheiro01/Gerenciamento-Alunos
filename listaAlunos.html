@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/listAln.css">
+
+    <!-- TODOS OS SCRIPTS COM DEFER DENTRO DO HEAD -->
+    <script src="js/model/calcula.media.js" defer></script>
+    <script src="js/view/aluno-view.js" defer></script>
+    <script src="js/model/alunos.js" defer></script>
+    <script src="js/controller/salvar-aluno.js" defer></script>
+    <script src="js/controller/form-aluno.js" defer></script>
+    <script src="js/controller/consultar-aluno.js" defer></script>
+    <script src="js/controller/excluir-aluno.js" defer></script>
+</head>
+<body>
+    <div class="container mt-4"> 
+        <header>
+            <h1>Senac</h1>
+        </header>
+
+        <main>
+            <!-- Tabela -->
+            <div class="card mb-4"> 
+                <div class="card-header"> 
+                    <h2>Lista de Alunos</h2> 
+                </div>
+                <div class="card-body"> 
+                    <table class="table table-bordered"> 
+                        <thead class="table-dark"> 
+                            <tr><th>Nome</th><th>Trabalho</th><th>Prova</th><th>Média</th><th>Ações</th></tr>
+                        </thead>
+                        <tbody id="corpotabela"> 
+                            <tr><td colspan="5">
+                        </tbody>
+                    </table>
+                    <button id="btnConsultarAluno" class="btn btn-info">Consultar Alunos</button>
+                </div>
+            </div>
+
+            <!-- Formulário -->
+            <div class="card"> 
+                <div class="card-header"> 
+                    <h2>Cadastro de Aluno</h2>
+                </div>
+                <div class="card-body"> 
+                    <div class="mb-3"> 
+                        <label class="form-label">Nome</label>
+                        <input type="text" id="nome" class="form-control"> 
+                    </div>
+                    <div class="mb-3"> 
+                        <label class="form-label">Nota Trabalho (0-10)</label>
+                        <input type="number" id="trabalho" class="form-control" step="0.1" min="0" max="10"> 
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nota Prova (0-10)</label> 
+                        <input type="number" id="prova" class="form-control" step="0.1" min="0" max="10"> 
+                    </div>
+                    <button id="btnSalvarAluno" class="btn btn-primary">Salvar Aluno</button> 
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

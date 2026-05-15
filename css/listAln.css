@@ -1,0 +1,17 @@
+body {
+    background-color: #f5f6fa;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.btn-info {
+    background-color: #00b894;
+    border-color: #00b894;
+}
+.btn-info:hover {
+    background-color: #019874;
+}
